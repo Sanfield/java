@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.imn.dao.ProductMapper">
+	<insert id="InsertInfoDept">
+		insert into product(
+		did,
+		dName,
+		dDesc
+		)values(
+		#{did},
+		#{dName},
+		#{dDesc}
+		)
+	</insert>
+	<delete id= "delProduct">
+	delect from product dName=#{dName},dDesc=#{dDesc}
+	where did=#{did}
+	</delete>
+	<update id="updateProduct">
+	update product set dName=#{dName},dDesc=#{dDesc}
+	</update>
+	<select id= "findProductById" resultType="com.imn.entity.ProductInfo">
+	select * from product
+	where did=#{did}
+	</select>
+	<select id="findProductWithPage" resultType="com.imn.entity.ProductInfo">
+	select * from product
+	limit #{page},#{rows}
+	</select>
+</mapper>
