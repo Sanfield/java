@@ -1,0 +1,26 @@
+class Dome extends  Thread
+{
+    private int ticket = 10;
+
+	public void run()
+	{
+		while(this.ticket>0)
+		{
+			System.out.println("ÂôÆ±"+this.ticket--);
+		}
+	}  
+}
+
+public class Dome04 
+{
+	public static void main(String[] args) 
+	{
+		Dome d1= new Dome();
+		Dome d2= new Dome();
+		Dome d3= new Dome();
+		d1.start();
+		d2.start();
+		d3.start();
+		
+	}
+}
