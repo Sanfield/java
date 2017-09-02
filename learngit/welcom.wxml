@@ -1,0 +1,8 @@
+<!--pages/welcom/welcom.wxml-->
+<view class="container">
+    <image class="avatar" src="/images/background.png"></image>
+    <text class="motto">hello,Sanfield</text>
+    <view class="journey-container" bindtap="onTap">
+        <text class="journey">开启程序之旅</text>
+    </view>
+</view>
